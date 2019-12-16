@@ -1,0 +1,460 @@
+<Agent>
+	<Type>xf</Type>
+	<Name>推进之王</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>能天使</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>闪灵</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>星熊</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>伊芙利特</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>塞雷娅</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>银灰</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>夜莺</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>艾雅法拉</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>陈</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>安洁莉娜</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>斯卡蒂</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>黑</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>赫拉格</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>麦哲伦</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>莫斯提马</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>幽灵鲨</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>芙兰卡</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>德克萨斯</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>凛冬</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>白面鸮</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>蓝毒</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>普罗旺斯</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>红</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>赫默</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>雷蛇</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>临光</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>夜魔</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>天火</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>初雪</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>拉普兰德</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>华法琳</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>守林人</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>狮蝎</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>真理</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>白金</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>陨星</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>可颂</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>梅尔</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>崖心</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>食铁兽</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>空</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>诗怀雅</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>格劳克斯</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>星极</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>送葬人</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>槐琥</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>深海色</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>杜宾</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>梅</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>远山</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>夜烟</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>白雪</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>流星</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>蛇屠箱</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>末药</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>猎蜂</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>慕斯</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>砾</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>暗索</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>调香师</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>地灵</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>霜叶</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>清道夫</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>古米</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>角峰</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>缠丸</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>tz</Type>
+	<Name>阿消</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>红豆</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>杰西卡</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>格雷伊</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>苏苏洛</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>桃金娘</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>红云</Name>
+	<Level>4</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>芬</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>克洛丝</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>ss</Type>
+	<Name>炎熔</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>米格鲁</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>芙蓉</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>卡缇</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>史都华德</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>香草</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>玫兰莎</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>yl</Type>
+	<Name>安赛尔</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>fz</Type>
+	<Name>梓兰</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>翎羽</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jj</Type>
+	<Name>空爆</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>月见夜</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>zz</Type>
+	<Name>斑点</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>泡普卡</Name>
+	<Level>3</Level>
+</Agent>
+<Agent>
+	<Type>xf</Type>
+	<Name>苇草</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>布洛卡</Name>
+	<Level>5</Level>
+</Agent>

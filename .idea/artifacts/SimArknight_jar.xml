@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SimArknight:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SimArknight_jar</output-path>
+    <root id="archive" name="SimArknight.jar">
+      <element id="module-output" name="SimArknight" />
+    </root>
+  </artifact>
+</component>
