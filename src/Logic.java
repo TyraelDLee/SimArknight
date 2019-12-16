@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+/**************************************************************************
+ *                                                                        *
+ *                         SimArknight ver 1.0                            *
+ *                                                                        *
+ *    Class contains the logic layer for this application.                *
+ *                                                                        *
+ **************************************************************************/
+
 public class Logic {
     private int Num_Sum = 0;
     private int last_lv6 = 0;

@@ -6,7 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="" />
+    <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileOpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOpe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rule.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +40,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UQoq4bQisb6X4m26O7DBH2RT5H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -133,28 +158,40 @@
       <workItem from="1575813249947" duration="6080000" />
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
+      <workItem from="1576476944298" duration="1953000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Logic.java</url>
-          <line>145</line>
+          <line>153</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Logic.java</url>
-          <line>42</line>
+          <line>50</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/FileOpe.java</url>
-          <line>138</line>
+          <line>145</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>

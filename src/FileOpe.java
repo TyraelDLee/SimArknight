@@ -1,6 +1,13 @@
 import java.io.*;
 import java.util.ArrayList;
 
+/**************************************************************************
+ *                                                                        *
+ *                         SimArknight ver 1.0                            *
+ *                                                                        *
+ *                                                                        *
+ **************************************************************************/
+
 public class FileOpe {
     private static final String list_src = "res/List.alist";
     private static final String rule_src = "res/^name.alist";

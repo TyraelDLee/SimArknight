@@ -38,28 +38,40 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**************************************************************************
+ *                                                                        *
+ *                         SimArknight ver 1.0                            *
+ *                                                                        *
+ *                                                                        *
+ **************************************************************************/
+
 public class GUI extends Application {
+    //-- essential part definition --//
     private final Group root = new Group();
     private static final int BOARD_WIDTH = 1000;
     private static final int BOARD_HEIGHT = 600;
     private static final String imgSrc = "res/img/";
     private static final String imgTyp = ".png";
+    private int prob6 = 2, prob5 = 8, prob4 = 50, prob3 = 40;
+    private Logic basicLogic = new Logic();
+    private double zoomFactor = 1;
+    //-- essential part definition --//
+
+    //-- components initialized --//
     private GridPane showPane = new GridPane();
     private StatView sv = new StatView();
     private ProbView pv = new ProbView();
     private CostView cv = new CostView();
-
-    private final Color lv6 = new Color(.97, .79, .32, 1);
-    private final Color lv5 = new Color(1, .97, .68, 1);
-    private final Color lv4 = new Color(.67, .68, .88, 1);
-    private final Color lv3 = new Color(.75, .75, .75, 1);
-
-    private int prob6 = 2, prob5 = 8, prob4 = 50, prob3 = 40;
-    private Logic basicLogic = new Logic();
-    private double zoomFactor = 1;
-
+    private CustomBtn cb1 = new CustomBtn("600"), cba = new CustomBtn("6000");
+    private ResetBtn resetBtn = new ResetBtn();
+    private Setting setting = new Setting();
+    //-- components initialized --//
 
     class AgentTag extends StackPane {
+        private final Color lv6 = new Color(.97, .79, .32, 1);
+        private final Color lv5 = new Color(1, .97, .68, 1);
+        private final Color lv4 = new Color(.67, .68, .88, 1);
+        private final Color lv3 = new Color(.75, .75, .75, 1);
         private Rectangle tag = new Rectangle();
         private Label nameTag = new Label();
         private Label lvTag = new Label();
@@ -87,7 +99,7 @@ public class GUI extends Application {
             this.agentImg.setImage(new Image(imgSrc + "AgentImg/" + this.name + imgTyp));
 
             setTag();
-            resize(0,0);
+            resize(0, 0);
             this.getChildren().add(tag);
             this.getChildren().add(lvTag);
             this.getChildren().add(typeImg);
@@ -223,7 +235,7 @@ public class GUI extends Application {
             this.getChildren().addAll(this.bckg, this.text);
         }
 
-        ResetBtn(double width, ImageView imageView){
+        ResetBtn(double width, ImageView imageView) {
             this.setAlignment(Pos.CENTER);
             this.bckg.setFill(background);
             this.bckg.setWidth(width);
@@ -253,7 +265,7 @@ public class GUI extends Application {
         private TextField l3 = new TextField();
         private GridPane grid = new GridPane();
         private ResetBtn set = new ResetBtn(100, "更新概率");
-        private ResetBtn res = new ResetBtn(50, new ImageView(new Image(imgSrc+"reload"+imgTyp)));
+        private ResetBtn res = new ResetBtn(50, new ImageView(new Image(imgSrc + "reload" + imgTyp)));
 
         Setting() {
             this.l6.setPromptText("6星概率 ");
@@ -394,6 +406,7 @@ public class GUI extends Application {
         private Label numl4 = new Label("4星干员概率: ");
         private Label numl5 = new Label("5星干员概率: ");
         private Label numl6 = new Label("6星干员概率: ");
+
         ProbView() {
             this.setHgap(0);
             this.setVgap(-3);
@@ -555,124 +568,91 @@ public class GUI extends Application {
 
     private Number mainStageHeight = BOARD_HEIGHT, mainStageWidth = BOARD_WIDTH;
 
-    private void setZoomFactor(Number mainStageWidth, Number mainStageHeight){
-        double width = mainStageWidth.doubleValue()/BOARD_WIDTH, height = mainStageHeight.doubleValue()/BOARD_HEIGHT;
-        if(width < height)
-            zoomFactor = Math.round(width * 100.0)/100.0;
+    private void setZoomFactor(Number mainStageWidth, Number mainStageHeight) {
+        double width = mainStageWidth.doubleValue() / BOARD_WIDTH, height = mainStageHeight.doubleValue() / BOARD_HEIGHT;
+        if (width < height)
+            zoomFactor = Math.round(width * 100.0) / 100.0;
         else
-            zoomFactor = Math.round(height * 100.0)/100.0;
+            zoomFactor = Math.round(height * 100.0) / 100.0;
     }
 
-    CustomBtn cb1 = new CustomBtn("600"), cba = new CustomBtn("6000");
-    ResetBtn resetBtn = new ResetBtn();
-    Setting setting = new Setting();
     @Override
     public void start(Stage primaryStage) {
         //Height min = 420, Width min = 720
+        //-- main part initialized section --//
         primaryStage.setTitle("抽卡模拟器");
         primaryStage.setMinHeight(420);
         primaryStage.setMinWidth(720);
         Scene mainStage = new Scene(root, mainStageWidth.doubleValue(), mainStageHeight.doubleValue());
         mainStage.setFill(Color.rgb(200, 200, 200, 0.3));
-        //--resize listener--//
+        //-- main part initialized section --//
+
+        //-- resize listener --//
         mainStage.heightProperty().addListener((observable, oldValue, newValue) -> {
             mainStageHeight = newValue;
-            setZoomFactor(mainStageWidth,mainStageHeight);
+            setZoomFactor(mainStageWidth, mainStageHeight);
             resize();
         });
         mainStage.widthProperty().addListener((observable, oldValue, newValue) -> {
             mainStageWidth = newValue;
             showPane.setMinWidth(mainStageWidth.intValue());
-            setZoomFactor(mainStageWidth,mainStageHeight);
+            setZoomFactor(mainStageWidth, mainStageHeight);
             resize();
         });
 
-        //--resize listener--//
+        //-- resize listener --//
 
-        //--test section--//
+        //-- test section --//
         //basicLogic.set_Prob(100, 0, 0, 0);
-        //--test section--//
+        //-- test section --//
+
+        //-- initialized section --//
         resize();
-
-
         pv.setData(basicLogic.getStat()[6], basicLogic.getStat()[7], basicLogic.getStat()[8], basicLogic.getStat()[9]);
-
 
         showPane.setAlignment(Pos.CENTER);
         showPane.setBackground(new Background(new BackgroundFill(Color.rgb(200, 200, 200, 0.8), null, null)));
         showPane.setHgap(0);
         showPane.setVgap(6);
+        //-- initialized section --//
 
+        //-- listener section --//
+        cb1.setOnMouseClicked(event -> drawPool(1));
+        cb1.setOnMouseEntered(event -> cb1.setOver(1.0));
+        cb1.setOnMouseExited(event -> cb1.setOver(0.8));
 
-        cb1.setOnMouseClicked(event -> {
-            drawPool(1);
-        });
-        cb1.setOnMouseEntered(event -> {
-            cb1.setOver(1.0);
-        });
-        cb1.setOnMouseExited(event -> {
-            cb1.setOver(0.8);
-        });
+        cba.setOnMouseEntered(event -> cba.setOver(1.0));
+        cba.setOnMouseExited(event -> cba.setOver(0.8));
+        cba.setOnMouseClicked(event -> drawPool(10));
 
-        cba.setOnMouseEntered(event -> {
-            cba.setOver(1.0);
-        });
-        cba.setOnMouseExited(event -> {
-            cba.setOver(0.8);
-        });
-        cba.setOnMouseClicked(event -> {
-            drawPool(10);
-        });
+        resetBtn.setOnMouseEntered(event -> resetBtn.setOver(1.0));
+        resetBtn.setOnMouseExited(event -> resetBtn.setOver(0.8));
+        resetBtn.setOnMouseClicked(event -> reset());
 
+        setting.set_icn.setOnMouseClicked(event -> setting.onClick());
+        setting.set_icn.setOnMouseEntered(event -> setting.rotateAnim(setting.set_icn, true));
+        setting.set_icn.setOnMouseExited(event -> setting.rotateAnim(setting.set_icn, false));
+        setting.set.setOnMouseClicked(event -> setting.setProb(false));
+        setting.set.setOnMouseEntered(event -> setting.set.setOver(1));
+        setting.set.setOnMouseExited(event -> setting.set.setOver(0.8));
+        setting.res.setOnMouseClicked(event -> setting.setProb(true));
+        setting.res.setOnMouseEntered(event -> setting.res.setOver(1));
+        setting.res.setOnMouseExited(event -> setting.res.setOver(0.8));
 
-        resetBtn.setOnMouseEntered(event -> {
-            resetBtn.setOver(1.0);
-        });
-        resetBtn.setOnMouseExited(event -> {
-            resetBtn.setOver(0.8);
-        });
-        resetBtn.setOnMouseClicked(event -> {
-            reset();
-        });
-
-
-        setting.set_icn.setOnMouseClicked(event -> {
-            setting.onClick();
-        });
-        setting.set_icn.setOnMouseEntered(event -> {
-            setting.rotateAnim(setting.set_icn, true);
-        });
-        setting.set_icn.setOnMouseExited(event -> {
-            setting.rotateAnim(setting.set_icn, false);
-        });
-        setting.set.setOnMouseClicked(event -> {
-            setting.setProb(false);
-        });
-        setting.set.setOnMouseEntered(event -> {
-            setting.set.setOver(1);
-        });
-        setting.set.setOnMouseExited(event -> {
-            setting.set.setOver(0.8);
-        });
-        setting.res.setOnMouseClicked(event -> {
-            setting.setProb(true);
-        });
-        setting.res.setOnMouseEntered(event -> {
-            setting.res.setOver(1);
-        });
-        setting.res.setOnMouseExited(event -> {
-            setting.res.setOver(0.8);
-        });
         mainStage.setOnMouseClicked(event -> {
             if (!(event.getX() > mainStage.getWidth() - 100 && event.getY() < 100))
                 setting.hidden();
         });
-        root.getChildren().addAll(cb1,cba,showPane,sv,pv,cv,resetBtn,setting);
+        //-- listener section --//
+
+        //-- initialized section --//
+        root.getChildren().addAll(cb1, cba, showPane, sv, pv, cv, resetBtn, setting);
         primaryStage.setScene(mainStage);
         primaryStage.show();
+        //-- initialized section --//
     }
 
-    private void resize(){
+    private void resize() {
         sv.setLocation(15, mainStageHeight.intValue() - 180);
         pv.setLocation(mainStageWidth.intValue() - 200, mainStageHeight.intValue() - 180);
         cv.setLocation(mainStageWidth.intValue() - 200, mainStageHeight.intValue() - 100);
@@ -681,13 +661,13 @@ public class GUI extends Application {
         resetBtn.setLocation(15, mainStageHeight.doubleValue() - 65);
         setting.setLocation(mainStageWidth.doubleValue() - 170, 20);
         showPane.setMinWidth(mainStageWidth.intValue());
-        showPane.setMinHeight(250*zoomFactor);
-        showPane.setLayoutY(100*zoomFactor);
-        if(mainStageHeight.doubleValue()>=650 && mainStageWidth.doubleValue()<=900)
-            showPane.setLayoutY((mainStageHeight.doubleValue()-showPane.getMinHeight())/2-100);
-        for(Node node : showPane.getChildren())
-            node.resize(0,0);
-        if(mainStageHeight.doubleValue() <= 440){
+        showPane.setMinHeight(250 * zoomFactor);
+        showPane.setLayoutY(100 * zoomFactor);
+        if (mainStageHeight.doubleValue() >= 650 && mainStageWidth.doubleValue() <= 900)
+            showPane.setLayoutY((mainStageHeight.doubleValue() - showPane.getMinHeight()) / 2 - 100);
+        for (Node node : showPane.getChildren())
+            node.resize(0, 0);
+        if (mainStageHeight.doubleValue() <= 440) {
             sv.setLocation(15, mainStageHeight.intValue() - 150);
             pv.setLocation(mainStageWidth.intValue() - 200, mainStageHeight.intValue() - 150);
             cv.setLocation(mainStageWidth.intValue() - 200, mainStageHeight.intValue() - 80);
