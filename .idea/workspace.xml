@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileOpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOpe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,7 +150,7 @@
       <workItem from="1575813249947" duration="6080000" />
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
-      <workItem from="1576476944298" duration="6074000" />
+      <workItem from="1576476944298" duration="6453000" />
     </task>
     <servers />
   </component>
@@ -176,7 +173,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Logic.java</url>
-          <line>278</line>
+          <line>259</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

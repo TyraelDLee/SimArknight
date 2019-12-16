@@ -190,26 +190,7 @@ public class Logic {
                 }
             }
         }else{
-            if (agent.getLevel() == 3) {
-                getLv3++;
-                int idx_cr = rolCr.nextInt(lv3);
-                agent = arrayList_lv3.get(idx_cr);
-            }
-            if (agent.getLevel() == 4) {
-                getLv4++;
-                int idx_cr = rolCr.nextInt(lv4);
-                agent = arrayList_lv4.get(idx_cr);
-            }
-            if (agent.getLevel() == 5) {
-                getLv5++;
-                int idx_cr = rolCr.nextInt(lv5);
-                agent = arrayList_lv5.get(idx_cr);
-            }
-            if (agent.getLevel() == 6) {
-                getLv6++;
-                int idx_cr = rolCr.nextInt(lv6);
-                agent = arrayList_lv6.get(idx_cr);
-            }
+            agent = roll_cr(agent);
         }
         return agent;
     }
