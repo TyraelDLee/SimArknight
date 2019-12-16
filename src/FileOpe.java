@@ -183,7 +183,6 @@ public class FileOpe {
         try {
             String context = readAList(location);
             String[] items = context.split("</Rule>\r\n");
-            System.out.println(items.length);
             for (String item : items) {
                 item = item.replace("<Rule>", "").replace("\t", "");
                 String[] detail = item.split("\r\n");

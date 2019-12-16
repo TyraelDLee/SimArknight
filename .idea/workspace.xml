@@ -7,25 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileOpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOpe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rule.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GUI">
+  <component name="RunManager" selected="Application.Logic">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -111,6 +97,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="SimArknight" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -138,9 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Logic" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.GUI" />
         <item itemvalue="Application.FileOpe" />
-        <item itemvalue="Application.Logic" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +153,7 @@
       <workItem from="1575813249947" duration="6080000" />
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
-      <workItem from="1576476944298" duration="1953000" />
+      <workItem from="1576476944298" duration="6074000" />
     </task>
     <servers />
   </component>
@@ -181,7 +176,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Logic.java</url>
-          <line>153</line>
+          <line>278</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

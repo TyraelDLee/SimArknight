@@ -64,27 +64,152 @@ public class Logic {
         return roll_cr(agent);
     }
 
+    public Agent roll_lv(String name) {
+        Num_Sum++;
+        last_lv6++;
+        Agent agent = new Agent();
+        Random rol_lev = new Random();
+        //insert probability here.
+        if (!isChangedProb)
+            cur_prob = prob(cur_prob);
+        else cur_prob = probs_ini;
+        int idx_lev = rol_lev.nextInt(9999) + 1;
+
+        if (idx_lev <= cur_prob[0] * 100)
+            agent.setLevel(6);
+        else if (idx_lev <= (cur_prob[0] + cur_prob[1]) * 100)
+            agent.setLevel(5);
+        else if (idx_lev <= (cur_prob[0] + cur_prob[1] + cur_prob[2]) * 100)
+            agent.setLevel(4);
+        else if (idx_lev <= (cur_prob[0] + cur_prob[1] + cur_prob[2] + cur_prob[3]) * 100)
+            agent.setLevel(3);
+        if (agent.getLevel() == 6) {
+            last_lv6 = 0;
+            if (!isChangedProb)
+                cur_prob = new double[]{2, 8, 50, 40};
+        }
+        return roll_cr(agent, name);
+    }
+
     private Agent roll_cr(Agent agent) {
         Random rolCr = new Random();
         if (agent.getLevel() == 3) {
             getLv3++;
-            int idx_cr = rolCr.nextInt(lv3 - 1);
+            int idx_cr = rolCr.nextInt(lv3);
             agent = arrayList_lv3.get(idx_cr);
         }
         if (agent.getLevel() == 4) {
             getLv4++;
-            int idx_cr = rolCr.nextInt(lv4 - 1);
+            int idx_cr = rolCr.nextInt(lv4);
             agent = arrayList_lv4.get(idx_cr);
         }
         if (agent.getLevel() == 5) {
             getLv5++;
-            int idx_cr = rolCr.nextInt(lv5 - 1);
+            int idx_cr = rolCr.nextInt(lv5);
             agent = arrayList_lv5.get(idx_cr);
         }
         if (agent.getLevel() == 6) {
             getLv6++;
-            int idx_cr = rolCr.nextInt(lv6 - 1);
+            int idx_cr = rolCr.nextInt(lv6);
             agent = arrayList_lv6.get(idx_cr);
+        }
+        return agent;
+    }
+
+    private Agent roll_cr(Agent agent, String name) {
+        ArrayList<Rule> rules = new FileOpe().getRule(name);
+        ArrayList<Agent> upAgents = new ArrayList<>();
+        ArrayList<Agent> upOthers = new ArrayList<>();
+        ArrayList<Agent> pickedUp = new ArrayList<>();
+        Random upI = new Random();
+        for (Rule r : rules) {
+            if (r.getLevel() == agent.getLevel()) {
+                if (agent.getLevel() == 3)
+                    pickedUp = arrayList_lv3;
+                if (agent.getLevel() == 4)
+                    pickedUp = arrayList_lv4;
+                if (agent.getLevel() == 5)
+                    pickedUp = arrayList_lv5;
+                if (agent.getLevel() == 6)
+                    pickedUp = arrayList_lv6;
+                for (Agent upAgent : pickedUp){
+                    for(String pickName : r.names){
+                        if(upAgent.getName().equals(pickName))
+                            upAgents.add(upAgent);
+                        else
+                            upOthers.add(upAgent);
+                    }
+                }
+            }
+        }
+        int upNums = upI.nextInt(99);
+        Random rolCr = new Random();
+        if(upAgents.size()>0){
+            if (agent.getLevel() == 3) {
+                getLv3++;
+                if(upNums < 50){
+                    int idx_cr = rolCr.nextInt(upAgents.size());
+                    agent = upAgents.get(idx_cr);
+                }
+                else{
+                    int idx_cr = rolCr.nextInt(upOthers.size());
+                    agent = upOthers.get(idx_cr);
+                }
+            }
+            if (agent.getLevel() == 4) {
+                getLv4++;
+                if(upNums < 50){
+                    int idx_cr = rolCr.nextInt(upAgents.size());
+                    agent = upAgents.get(idx_cr);
+                }
+                else{
+                    int idx_cr = rolCr.nextInt(upOthers.size());
+                    agent = upOthers.get(idx_cr);
+                }
+            }
+            if (agent.getLevel() == 5) {
+                getLv5++;
+                if(upNums < 50){
+                    int idx_cr = rolCr.nextInt(upAgents.size());
+                    agent = upAgents.get(idx_cr);
+                }
+                else{
+                    int idx_cr = rolCr.nextInt(upOthers.size());
+                    agent = upOthers.get(idx_cr);
+                }
+            }
+            if (agent.getLevel() == 6) {
+                getLv6++;
+                if(upNums < 50){
+                    int idx_cr = rolCr.nextInt(upAgents.size());
+                    agent = upAgents.get(idx_cr);
+                }
+                else{
+                    int idx_cr = rolCr.nextInt(upOthers.size());
+                    agent = upOthers.get(idx_cr);
+                }
+            }
+        }else{
+            if (agent.getLevel() == 3) {
+                getLv3++;
+                int idx_cr = rolCr.nextInt(lv3);
+                agent = arrayList_lv3.get(idx_cr);
+            }
+            if (agent.getLevel() == 4) {
+                getLv4++;
+                int idx_cr = rolCr.nextInt(lv4);
+                agent = arrayList_lv4.get(idx_cr);
+            }
+            if (agent.getLevel() == 5) {
+                getLv5++;
+                int idx_cr = rolCr.nextInt(lv5);
+                agent = arrayList_lv5.get(idx_cr);
+            }
+            if (agent.getLevel() == 6) {
+                getLv6++;
+                int idx_cr = rolCr.nextInt(lv6);
+                agent = arrayList_lv6.get(idx_cr);
+            }
         }
         return agent;
     }
@@ -149,13 +274,13 @@ public class Logic {
 
     public static void main(String[] args) {
         Logic l = new Logic();
-        //l.set_Prob(100,0,0,0);
+        l.set_Prob(100,0,0,0);
         for (int i = 0; i < 100; i++) {
-            System.out.println(l.roll_lv().toString() + " " + l.last_lv6 + " " + l.cur_prob[0] + " " + l.cur_prob[1] + " " + l.cur_prob[2] + " " + l.cur_prob[3]);
+            System.out.println(l.roll_lv("test").toString() + " " + l.last_lv6 + " " + l.cur_prob[0] + " " + l.cur_prob[1] + " " + l.cur_prob[2] + " " + l.cur_prob[3]);
         }
-        System.out.println(l.Num_Sum);
-        System.out.println(l.getLv3 + " " + l.getLv4 + " " + l.getLv5 + " " + l.getLv6 + " ");
-        System.out.println(l.getCost()[0] + " " + l.getCost()[1] + " " + l.getCost()[2]);
+        //System.out.println(l.Num_Sum);
+        //System.out.println(l.getLv3 + " " + l.getLv4 + " " + l.getLv5 + " " + l.getLv6 + " ");
+        //System.out.println(l.getCost()[0] + " " + l.getCost()[1] + " " + l.getCost()[2]);
     }
 }
 //TODO: handel the data from Rules and add the rule into the roll agents.
