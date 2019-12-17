@@ -54,6 +54,7 @@ public class GUI extends Application {
     private static final String imgTyp = ".png";
     private int prob6 = 2, prob5 = 8, prob4 = 50, prob3 = 40;
     private Logic basicLogic = new Logic();
+    private FileOpe file = new FileOpe();
     private double zoomFactor = 1;
     //-- essential part definition --//
 
@@ -65,6 +66,12 @@ public class GUI extends Application {
     private CustomBtn cb1 = new CustomBtn("600"), cba = new CustomBtn("6000");
     private ResetBtn resetBtn = new ResetBtn();
     private Setting setting = new Setting();
+    private ChoiceBox<String> choiceUp = new ChoiceBox<>(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
+            "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
+            "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
+            "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
+            "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
+    private String upName = "none";
     //-- components initialized --//
 
     class AgentTag extends StackPane {
@@ -78,6 +85,8 @@ public class GUI extends Application {
         private ImageView typeImg = new ImageView();
         private ImageView agentImg = new ImageView();
         private String name, type, level;
+
+        public AgentTag(){}
 
         public AgentTag(Agent agent) {
             this.level = agent.getLevel() + "";
@@ -347,6 +356,13 @@ public class GUI extends Application {
                 l3.setText("");
             }
 
+            if(prob6==23333){
+                prob6 = 100;
+                prob5 = 0;
+                prob4 = 0;
+                prob3 = 0;
+                upName = "洁哥不要啊啊啊啊";
+            }
             basicLogic.set_Prob(prob6, prob5, prob4, prob3);
             pv.setData(prob6, prob5, prob4, prob3);
         }
@@ -530,12 +546,19 @@ public class GUI extends Application {
     private void drawPool(int time) {
         showPane.getChildren().clear();
         for (int i = 0; i < time; i++) {
-            AgentTag agentTag = new AgentTag(basicLogic.roll_lv());
+            AgentTag agentTag = new AgentTag();
+            if(upName.equals("none") || upName.equals("")){
+                agentTag = new AgentTag(basicLogic.roll_lv());//--insert uo here!!--//
+            }else{
+                agentTag = new AgentTag(basicLogic.roll_lv(upName));
+            }
+            AgentTag finalAgentTag = agentTag;
             agentTag.setOnMouseEntered(event -> {
-                moveUp(agentTag, true);
+                moveUp(finalAgentTag, true);
             });
+            AgentTag finalAgentTag1 = agentTag;
             agentTag.setOnMouseExited(event -> {
-                moveUp(agentTag, false);
+                moveUp(finalAgentTag1, false);
             });
             if (time > 1)
                 animation(agentTag, i % 2);
@@ -643,10 +666,16 @@ public class GUI extends Application {
             if (!(event.getX() > mainStage.getWidth() - 100 && event.getY() < 100))
                 setting.hidden();
         });
+        choiceUp.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> arg0, String old_str, String new_str) {
+                upName = choiceUp.getSelectionModel().getSelectedItem();
+            }
+        });
         //-- listener section --//
 
         //-- initialized section --//
-        root.getChildren().addAll(cb1, cba, showPane, sv, pv, cv, resetBtn, setting);
+        root.getChildren().addAll(cb1, cba, showPane, sv, pv, cv, resetBtn, setting, choiceUp);
         primaryStage.setScene(mainStage);
         primaryStage.show();
         //-- initialized section --//
@@ -663,6 +692,12 @@ public class GUI extends Application {
         showPane.setMinWidth(mainStageWidth.intValue());
         showPane.setMinHeight(250 * zoomFactor);
         showPane.setLayoutY(100 * zoomFactor);
+        choiceUp.setMinSize(200,20);
+        choiceUp.setPrefSize(300*zoomFactor,20*zoomFactor);
+        choiceUp.setLayoutX(mainStageWidth.doubleValue()/2 - choiceUp.getPrefWidth()/2);
+        choiceUp.setLayoutY(20);
+        choiceUp.getSelectionModel().select(0);
+        choiceUp.setStyle(String.format("-fx-font-size: %f ", 10 * zoomFactor));
         if (mainStageHeight.doubleValue() >= 650 && mainStageWidth.doubleValue() <= 900)
             showPane.setLayoutY((mainStageHeight.doubleValue() - showPane.getMinHeight()) / 2 - 100);
         for (Node node : showPane.getChildren())

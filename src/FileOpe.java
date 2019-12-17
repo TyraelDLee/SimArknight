@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class FileOpe {
     private static final String list_src = "res/List.alist";
-    private static final String rule_src = "res/^name.alist";
+    private static final String rule_src = "res/upRule/^name.rlist";
     private final String cont_list = "<Agent>\r\n\t<Type>^t</Type>\r\n\t<Name>^n</Name>\r\n\t<Level>^l</Level>\r\n</Agent>\r\n";
     private final String cont_rule = "<Rule>\r\n\t<Level>^l</Level>\r\n\t<Name>^n</Name>\r\n\t<Up>^u</Up>\r\n</Rule>\r\n";
 
@@ -97,6 +97,10 @@ public class FileOpe {
         text = new String(filecontent, 0, in.read(filecontent));
         in.close();
         return text;
+    }
+
+    private void readALink(String address) throws IOException{
+        InputStream in = this.getClass().getResourceAsStream(address);
     }
 
     /**

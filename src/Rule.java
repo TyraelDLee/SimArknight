@@ -8,6 +8,7 @@ final class Rule{
     int up = 0;
     String[] names = new String[]{};
     int level = 0;
+    String title = "";
 
     public Rule(int up, String[] names, int level){
         this.level = level;

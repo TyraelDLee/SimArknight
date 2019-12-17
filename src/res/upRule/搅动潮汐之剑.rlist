@@ -1,0 +1,15 @@
+<Rule>
+	<Level>6</Level>
+	<Name>斯卡蒂</Name>
+	<Up>50</Up>
+</Rule>
+<Rule>
+	<Level>5</Level>
+	<Name>夜魔 临光</Name>
+	<Up>50</Up>
+</Rule>
+<Rule>
+	<Level>4</Level>
+	<Name>猎蜂 暗索</Name>
+	<Up>20</Up>
+</Rule>

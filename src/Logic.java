@@ -121,9 +121,11 @@ public class Logic {
         ArrayList<Agent> upAgents = new ArrayList<>();
         ArrayList<Agent> upOthers = new ArrayList<>();
         ArrayList<Agent> pickedUp = new ArrayList<>();
+        int up_rate = 0;
         Random upI = new Random();
         for (Rule r : rules) {
             if (r.getLevel() == agent.getLevel()) {
+                up_rate = r.getUp();
                 if (agent.getLevel() == 3)
                     pickedUp = arrayList_lv3;
                 if (agent.getLevel() == 4)
@@ -147,50 +149,37 @@ public class Logic {
         if(upAgents.size()>0){
             if (agent.getLevel() == 3) {
                 getLv3++;
-                if(upNums < 50){
-                    int idx_cr = rolCr.nextInt(upAgents.size());
-                    agent = upAgents.get(idx_cr);
-                }
-                else{
-                    int idx_cr = rolCr.nextInt(upOthers.size());
-                    agent = upOthers.get(idx_cr);
-                }
+                agent = roll_up(upAgents,upOthers,agent, up_rate);
             }
             if (agent.getLevel() == 4) {
                 getLv4++;
-                if(upNums < 50){
-                    int idx_cr = rolCr.nextInt(upAgents.size());
-                    agent = upAgents.get(idx_cr);
-                }
-                else{
-                    int idx_cr = rolCr.nextInt(upOthers.size());
-                    agent = upOthers.get(idx_cr);
-                }
+                agent = roll_up(upAgents,upOthers,agent, up_rate);
             }
             if (agent.getLevel() == 5) {
                 getLv5++;
-                if(upNums < 50){
-                    int idx_cr = rolCr.nextInt(upAgents.size());
-                    agent = upAgents.get(idx_cr);
-                }
-                else{
-                    int idx_cr = rolCr.nextInt(upOthers.size());
-                    agent = upOthers.get(idx_cr);
-                }
+                agent = roll_up(upAgents,upOthers,agent, up_rate);
             }
             if (agent.getLevel() == 6) {
                 getLv6++;
-                if(upNums < 50){
-                    int idx_cr = rolCr.nextInt(upAgents.size());
-                    agent = upAgents.get(idx_cr);
-                }
-                else{
-                    int idx_cr = rolCr.nextInt(upOthers.size());
-                    agent = upOthers.get(idx_cr);
-                }
+                agent = roll_up(upAgents,upOthers,agent, up_rate);
             }
         }else{
             agent = roll_cr(agent);
+        }
+        return agent;
+    }
+
+    private Agent roll_up(ArrayList<Agent> upAgents, ArrayList<Agent> upOthers, Agent agent, int up){
+        Random upI = new Random();
+        Random rolCr = new Random();
+        int upNums = upI.nextInt(99)+1;
+        if(upNums <= up){
+            int idx_cr = rolCr.nextInt(upAgents.size());
+            agent = upAgents.get(idx_cr);
+        }
+        else{
+            int idx_cr = rolCr.nextInt(upOthers.size());
+            agent = upOthers.get(idx_cr);
         }
         return agent;
     }
@@ -257,7 +246,7 @@ public class Logic {
         Logic l = new Logic();
         l.set_Prob(100,0,0,0);
         for (int i = 0; i < 100; i++) {
-            System.out.println(l.roll_lv("test").toString() + " " + l.last_lv6 + " " + l.cur_prob[0] + " " + l.cur_prob[1] + " " + l.cur_prob[2] + " " + l.cur_prob[3]);
+            System.out.println(l.roll_lv("洁哥不要啊啊啊啊").toString() + " " + l.last_lv6 + " " + l.cur_prob[0] + " " + l.cur_prob[1] + " " + l.cur_prob[2] + " " + l.cur_prob[3]);
         }
         //System.out.println(l.Num_Sum);
         //System.out.println(l.getLv3 + " " + l.getLv4 + " " + l.getLv5 + " " + l.getLv6 + " ");

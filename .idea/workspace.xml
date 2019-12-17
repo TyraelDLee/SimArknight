@@ -7,8 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/FileOpe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Rule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/test.alist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileOpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOpe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/test.alist" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Logic">
+  <component name="RunManager" selected="Application.GUI">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -129,9 +146,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.Logic" />
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.FileOpe" />
       </list>
     </recent_temporary>
@@ -150,7 +167,7 @@
       <workItem from="1575813249947" duration="6080000" />
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
-      <workItem from="1576476944298" duration="6453000" />
+      <workItem from="1576476944298" duration="14583000" />
     </task>
     <servers />
   </component>
@@ -173,7 +190,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Logic.java</url>
-          <line>259</line>
+          <line>248</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -183,7 +200,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/FileOpe.java</url>
-          <line>145</line>
+          <line>149</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
