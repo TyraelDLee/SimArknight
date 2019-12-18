@@ -364,7 +364,7 @@ public class GUI extends Application {
                 prob3 = 0;
                 upName = "洁哥不要啊啊啊啊";
                 choiceUp.setItems(FXCollections.observableArrayList(upName));
-
+                choiceUp.getSelectionModel().select(0);
             }
 //            else{
 //                choiceUp.setItems(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
