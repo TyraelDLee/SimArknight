@@ -3,7 +3,7 @@ import java.util.Random;
 
 /**************************************************************************
  *                                                                        *
- *                         SimArknight ver 1.0                            *
+ *                         SimArknight ver 2.1                            *
  *                                                                        *
  *    Class contains the logic layer for this application.                *
  *                                                                        *

@@ -40,7 +40,7 @@ import java.util.Random;
 
 /**************************************************************************
  *                                                                        *
- *                         SimArknight ver 1.0                            *
+ *                         SimArknight ver 2.1                            *
  *                                                                        *
  *                                                                        *
  **************************************************************************/
@@ -362,7 +362,16 @@ public class GUI extends Application {
                 prob4 = 0;
                 prob3 = 0;
                 upName = "洁哥不要啊啊啊啊";
+                choiceUp.setItems(FXCollections.observableArrayList(upName));
+
+            }else{
+                choiceUp.setItems(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
+                        "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
+                        "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
+                        "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
+                        "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
             }
+            choiceUp.getSelectionModel().select(0);
             basicLogic.set_Prob(prob6, prob5, prob4, prob3);
             pv.setData(prob6, prob5, prob4, prob3);
         }
@@ -650,7 +659,10 @@ public class GUI extends Application {
 
         resetBtn.setOnMouseEntered(event -> resetBtn.setOver(1.0));
         resetBtn.setOnMouseExited(event -> resetBtn.setOver(0.8));
-        resetBtn.setOnMouseClicked(event -> reset());
+        resetBtn.setOnMouseClicked(event -> {
+            reset();
+            returnList();
+        });
 
         setting.set_icn.setOnMouseClicked(event -> setting.onClick());
         setting.set_icn.setOnMouseEntered(event -> setting.rotateAnim(setting.set_icn, true));
@@ -658,7 +670,10 @@ public class GUI extends Application {
         setting.set.setOnMouseClicked(event -> setting.setProb(false));
         setting.set.setOnMouseEntered(event -> setting.set.setOver(1));
         setting.set.setOnMouseExited(event -> setting.set.setOver(0.8));
-        setting.res.setOnMouseClicked(event -> setting.setProb(true));
+        setting.res.setOnMouseClicked(event -> {
+            setting.setProb(true);
+            returnList();
+        });
         setting.res.setOnMouseEntered(event -> setting.res.setOver(1));
         setting.res.setOnMouseExited(event -> setting.res.setOver(0.8));
 
@@ -708,6 +723,15 @@ public class GUI extends Application {
             cv.setLocation(mainStageWidth.intValue() - 200, mainStageHeight.intValue() - 80);
             resetBtn.setLocation(15, mainStageHeight.doubleValue() - 40);
         }
+    }
+
+    private void returnList(){
+        choiceUp.setItems(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
+                "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
+                "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
+                "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
+                "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
+        choiceUp.getSelectionModel().select(0);
     }
 }
 //TODO: add the selection bar for choose the up rules.
