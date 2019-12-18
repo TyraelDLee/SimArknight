@@ -8,12 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileOpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOpe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,6 +98,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UploadAgentUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UploadAgentUI" />
+      <module name="SimArknight" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -136,6 +148,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.UploadAgentUI" />
         <item itemvalue="Application.Logic" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.FileOpe" />
@@ -157,6 +170,7 @@
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
       <workItem from="1576476944298" duration="15750000" />
+      <workItem from="1576670940125" duration="1418000" />
     </task>
     <servers />
   </component>
@@ -168,7 +182,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -189,7 +205,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/FileOpe.java</url>
-          <line>149</line>
+          <line>165</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>

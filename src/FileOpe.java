@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class FileOpe {
     private static final String list_src = "res/List.alist";
     private static final String rule_src = "res/upRule/^name.rlist";
+    private static final String img_src = "res/img/AgentImg/^img.png";
     private final String cont_list = "<Agent>\r\n\t<Type>^t</Type>\r\n\t<Name>^n</Name>\r\n\t<Level>^l</Level>\r\n</Agent>\r\n";
     private final String cont_rule = "<Rule>\r\n\t<Level>^l</Level>\r\n\t<Name>^n</Name>\r\n\t<Up>^u</Up>\r\n</Rule>\r\n";
 
@@ -64,6 +65,21 @@ public class FileOpe {
         bw.write(text + content);
         bw.flush();
         bw.close();
+    }
+
+    public void UploadAgentList(Agent agent){
+        String agentCont = cont_list.replace("^t",agent.getType())
+                .replace("^l",agent.getLevel()+"")
+                .replace("^n",agent.getName());
+        try {
+            UpdateAgentList(agentCont);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void UploadAgentImg(String name){
+
     }
 
     /**
