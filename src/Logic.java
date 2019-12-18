@@ -35,6 +35,8 @@ public class Logic {
             probs_ini = new double[]{l6, l5, l4, l3};
             isChangedProb = true;
         }
+        if(l6==2 && l5==8 && l4==50 && l3==40)
+            isChangedProb = false;
     }
 
     public Agent roll_lv() {

@@ -584,6 +584,7 @@ public class GUI extends Application {
             sv.setData((int) stat[4], (int) stat[5], (int) stat[0],
                     (int) stat[1], (int) stat[2], (int) stat[3]);
             pv.setData(stat[6], stat[7], stat[8], stat[9]);
+            System.out.println(stat[6]+" "+stat[7]+" "+stat[8]+" "+stat[9]);
             cv.setData(basicLogic.getCost()[0], basicLogic.getCost()[1], basicLogic.getCost()[2]);
         }
     }
@@ -674,7 +675,7 @@ public class GUI extends Application {
         setting.set.setOnMouseExited(event -> setting.set.setOver(0.8));
         setting.res.setOnMouseClicked(event -> {
             setting.setProb(true);
-            returnList();
+            if(upName.equals("洁哥不要啊啊啊啊"))returnList();
         });
         setting.res.setOnMouseEntered(event -> setting.res.setOver(1));
         setting.res.setOnMouseExited(event -> setting.res.setOver(0.8));
