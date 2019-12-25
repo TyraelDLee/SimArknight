@@ -7,6 +7,7 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -67,11 +68,14 @@ public class GUI extends Application {
     private CustomBtn cb1 = new CustomBtn("600"), cba = new CustomBtn("6000");
     private ResetBtn resetBtn = new ResetBtn();
     private Setting setting = new Setting();
-    private ChoiceBox<String> choiceUp = new ChoiceBox<>(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
+    private ObservableList<String> ruleList = FXCollections.observableArrayList(
+            "none","热情,膨胀,爆发 !","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅up)","锁与匙的守卫者","强力干员(星熊,推进之王up)",
             "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
-            "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
-            "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
-            "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
+            "强力干员(银灰,伊芙利特up)","强力干员(能天使,推进之王up)","久铸尘铁","强力干员(星熊,安洁莉娜up)","深夏守夜人",
+            "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特up)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜up)",
+            "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑");
+    private ChoiceBox<String> choiceUp = new ChoiceBox<>(ruleList);
+
     private String upName = "none";
     //-- components initialized --//
 
@@ -366,14 +370,6 @@ public class GUI extends Application {
                 choiceUp.setItems(FXCollections.observableArrayList(upName));
                 choiceUp.getSelectionModel().select(0);
             }
-//            else{
-//                choiceUp.setItems(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
-//                        "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
-//                        "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
-//                        "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
-//                        "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
-//            }
-            //choiceUp.getSelectionModel().select(0);
             basicLogic.set_Prob(prob6, prob5, prob4, prob3);
             pv.setData(prob6, prob5, prob4, prob3);
         }
@@ -584,7 +580,6 @@ public class GUI extends Application {
             sv.setData((int) stat[4], (int) stat[5], (int) stat[0],
                     (int) stat[1], (int) stat[2], (int) stat[3]);
             pv.setData(stat[6], stat[7], stat[8], stat[9]);
-            System.out.println(stat[6]+" "+stat[7]+" "+stat[8]+" "+stat[9]);
             cv.setData(basicLogic.getCost()[0], basicLogic.getCost()[1], basicLogic.getCost()[2]);
         }
     }
@@ -729,11 +724,7 @@ public class GUI extends Application {
     }
 
     private void returnList(){
-        choiceUp.setItems(FXCollections.observableArrayList("none","凝电之钻","强力干员(夜莺,黑up)","强力干员(伊芙利特,塞雷娅)","锁与匙的守卫者","强力干员(星熊,推进之王)",
-                "「感谢庆典」纪念寻访(银灰,陈,安洁丽娜,艾雅法拉up)","强力干员(闪灵,夜莺up)","强力干员(塞雷娅,斯卡蒂up)","冰封原野","火舞之人",
-                "强力干员(银灰,伊芙利特)","强力干员(能天使,推进之王)","久铸尘铁","强力干员(星熊,安洁莉娜)","深夏守夜人",
-                "强力干员(斯卡蒂,闪灵up)","强力干员(能天使,伊芙利特)","强力干员(塞雷娅,艾雅法拉up)","鞘中赤红","强力干员(推进之王,安洁莉娜)",
-                "龙门特别行动专员","强力干员(夜莺,银灰up)","强力干员(闪灵,塞雷娅up)","搅动潮汐之剑"));
+        choiceUp.setItems(ruleList);
         choiceUp.getSelectionModel().select(0);
     }
 }

@@ -8,12 +8,35 @@
   <component name="ChangeListManager">
     <list default="true" id="0cef43ab-95c4-4a9a-ac4e-d98f2f9a2ecf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight_v2.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SimArknight_jar/SimArknight_v2.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$AgentTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CostView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$CustomBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ProbView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$ResetBtn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$Setting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI$StatView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/Logic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/UploadAgentUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimArknight/UploadAgentUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(伊芙利特,塞雷娅).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(推进之王,安洁莉娜).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(星熊,安洁莉娜).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(星熊,推进之王).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(能天使,伊芙利特).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(能天使,推进之王).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimArknight/res/upRule/强力干员(银灰,伊芙利特).rlist" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UploadAgentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UploadAgentUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/List.alist" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/List.alist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(伊芙利特,塞雷娅).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(推进之王,安洁莉娜).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(星熊,安洁莉娜).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(星熊,推进之王).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(能天使,伊芙利特).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(能天使,推进之王).rlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/upRule/强力干员(银灰,伊芙利特).rlist" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,9 +166,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GUI" />
-        <item itemvalue="Application.UploadAgentUI" />
-        <item itemvalue="Application.Logic" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.Logic" />
+        <item itemvalue="Application.UploadAgentUI" />
         <item itemvalue="Application.FileOpe" />
       </list>
     </recent_temporary>
@@ -165,7 +188,10 @@
       <workItem from="1576242252286" duration="7912000" />
       <workItem from="1576412585580" duration="12208000" />
       <workItem from="1576476944298" duration="15750000" />
-      <workItem from="1576670940125" duration="2284000" />
+      <workItem from="1576670940125" duration="4533000" />
+      <workItem from="1576682790049" duration="3593000" />
+      <workItem from="1577089352468" duration="627000" />
+      <workItem from="1577096647819" duration="1387000" />
     </task>
     <servers />
   </component>

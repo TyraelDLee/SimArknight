@@ -1,6 +1,8 @@
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
 public class UploadAgentUI extends Application {
@@ -9,6 +11,7 @@ public class UploadAgentUI extends Application {
     private static final int BOARD_HEIGHT = 600;
     private double zoomFactor = 1;
     private Number mainStageHeight = BOARD_HEIGHT, mainStageWidth = BOARD_WIDTH;
+    private ChoiceBox<String> agentType = new ChoiceBox<>(FXCollections.observableArrayList("狙击","术师","先锋","近卫","重装","医疗","辅助","特种"));
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -18,6 +21,7 @@ public class UploadAgentUI extends Application {
         primaryStage.setMinWidth(720);
         Scene mainStage = new Scene(root, mainStageWidth.doubleValue(), mainStageHeight.doubleValue());
         //-- main part initialized section --//
+
 
 
 

@@ -458,3 +458,19 @@
 	<Name>布洛卡</Name>
 	<Level>5</Level>
 </Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>煌</Name>
+	<Level>6</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>灰喉</Name>
+	<Level>5</Level>
+</Agent>
+<Agent>
+	<Type>jw</Type>
+	<Name>安比尔</Name>
+	<Level>4</Level>
+</Agent>
+
