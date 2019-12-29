@@ -1,3 +1,4 @@
+package logic.GUI;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.scene.Group;

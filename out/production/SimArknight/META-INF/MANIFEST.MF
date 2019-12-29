@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: GUI
+Main-Class: GUI.GUI
 MIDlet-Icon: /res/img/yuanshiL.png
 MIDlet-1: SimArknight, /res/img/yuanshiL.png, classmain

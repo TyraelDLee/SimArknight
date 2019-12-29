@@ -1,39 +1,47 @@
+package logic;
 /**************************************************************************
  *                                                                        *
  *                         SimArknight ver 1.0                            *
  *                                                                        *
  *                                                                        *
  **************************************************************************/
-final class Rule{
-    int up = 0;
-    String[] names = new String[]{};
-    int level = 0;
-    String title = "";
+public final class Agent {
+    private int level = 0;
+    private String name = "";
+    private String type = "";
 
-    public Rule(int up, String[] names, int level){
+    public Agent(int level, String name) {
         this.level = level;
-        this.names = names;
-        this.up = up;
+        this.name = name;
     }
 
-    public int getUp(){
-        return this.up;
+    public Agent(){}
+
+    public void setLevel(int level){
+        this.level = level;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setType(String type){
+        this.type = type;
     }
 
     public int getLevel(){
         return this.level;
     }
 
-    public String[] getNames(){
-        return this.names;
+    public String getName(){
+        return this.name;
     }
 
+    public String getType(){
+        return this.type;
+    }
     @Override
     public String toString() {
-        String names = "Up: "+getUp()+" Level: "+getLevel()+" ";
-        for(String name : this.names){
-            names+=name+" ";
-        }
-        return names;
+        return this.level+" "+this.name+" "+this.type;
     }
 }

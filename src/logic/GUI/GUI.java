@@ -1,43 +1,33 @@
+package logic.GUI;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
-import javafx.beans.property.BooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Random;
+import logic.*;
+
 
 /**************************************************************************
  *                                                                        *
@@ -51,7 +41,7 @@ public class GUI extends Application {
     private final Group root = new Group();
     private static final int BOARD_WIDTH = 1000;
     private static final int BOARD_HEIGHT = 600;
-    private static final String imgSrc = "res/img/";
+    private static final String imgSrc = "logic/res/img/";
     private static final String imgTyp = ".png";
     private int prob6 = 2, prob5 = 8, prob4 = 50, prob3 = 40;
     private Logic basicLogic = new Logic();
@@ -79,7 +69,7 @@ public class GUI extends Application {
     private String upName = "none";
     //-- components initialized --//
 
-    class AgentTag extends StackPane {
+    public class AgentTag extends StackPane {
         private final Color lv6 = new Color(.97, .79, .32, 1);
         private final Color lv5 = new Color(1, .97, .68, 1);
         private final Color lv4 = new Color(.67, .68, .88, 1);
@@ -152,9 +142,9 @@ public class GUI extends Application {
             this.agentImg.setFitHeight(80 * zoomFactor);
             this.agentImg.setFitWidth(80 * zoomFactor);
 
-            setMargin(lvTag, new Insets(0, 0, 150 * zoomFactor, 0));
+            setMargin(lvTag, new Insets(0, 0, 200 * zoomFactor, 0));
             setMargin(agentImg, new Insets(0, 0, 40, 0));
-            setMargin(typeImg, new Insets(100 * zoomFactor, 0, 0, 0));
+            setMargin(typeImg, new Insets(200 * zoomFactor, 0, 0, 0));
         }
 
         public void setLocation(double X, double Y) {
@@ -163,7 +153,7 @@ public class GUI extends Application {
         }
     }
 
-    static class CustomBtn extends StackPane {
+    public static class CustomBtn extends StackPane {
         private Rectangle upperTrim = new Rectangle();
         private Rectangle mainTrim = new Rectangle();
         private Label x = new Label();
@@ -227,7 +217,7 @@ public class GUI extends Application {
         }
     }
 
-    static class ResetBtn extends StackPane {
+    public static class ResetBtn extends StackPane {
         private Rectangle bckg = new Rectangle();
         private Color background = new Color(.8, .8, .8, .8);
         private Label text = new Label("重置统计");
@@ -270,7 +260,7 @@ public class GUI extends Application {
         }
     }
 
-    class Setting extends StackPane {
+    public class Setting extends StackPane {
         ImageView set_icn = new ImageView();
         private boolean on = false;
         private TextField l6 = new TextField();
@@ -380,7 +370,7 @@ public class GUI extends Application {
         }
     }
 
-    static class StatView extends GridPane {
+    public static class StatView extends GridPane {
         private Label total = new Label("寻访次数: 0");
         private Label last6 = new Label("距离上次抽到6星次数: 0");
         private Label numl3 = new Label("3星干员: 0");
@@ -420,7 +410,7 @@ public class GUI extends Application {
         }
     }
 
-    static class ProbView extends GridPane {
+    public static class ProbView extends GridPane {
         private Label prob3 = new Label();
         private Label prob4 = new Label();
         private Label prob5 = new Label();
@@ -473,7 +463,7 @@ public class GUI extends Application {
         }
     }
 
-    static class CostView extends GridPane {
+    public static class CostView extends GridPane {
         private Label costY = new Label("× 0");
         private Label costS = new Label("× 0");
         private Label costR = new Label("× 0");
